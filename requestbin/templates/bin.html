@@ -20,7 +20,7 @@
           <div class="row-fluid">
             <div class="span4">
               {{base_url}}<br>
-              <span class="method">{{request.method}}</span> 
+              <span class="method">{{request.method}}</span>
               <span class="absolute-path">{{request.path}}</span><span class="querystring">{{request.query_string|to_qs}}</span>
             </div>
             <div class="span6 content">
@@ -168,7 +168,7 @@ public class RequestBinTutorial {
             {% else %}
               <p class="keypair"><strong>{{k}}:</strong> {{v}}</p>
             {% endif %}
-          {% endfor %} 
+          {% endfor %}
         {% endif %}
       </div>
       <div class="span8">
@@ -182,6 +182,10 @@ public class RequestBinTutorial {
     </div>
 
     <h5>RAW BODY</h5>
+    <div class="alert-message block-message info">
+      The raw request body may be truncated to <b>10KB</b>.
+      If you'd like to be able to log full requests, <a href="https://www.runscope.com/?utm_source=partner&amp;utm_medium=link&amp;utm_campaign=requestbin">sign up for a free Runscope account</a>. Runscope request captures also give you live updates, permanent URLs, file handling and much more.</p>
+    </div>
     <div class="request-body" data-id="{{ request.id }}">
 <pre class="body prettyprint">{%if request.raw%}{{request.raw}}{%else%}<em>None</em>{%endif%}</pre>
 
